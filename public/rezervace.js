@@ -1,36 +1,13 @@
-document.getElementById('rezervaceForm').addEventListener('submit', async function (e) {
-  e.preventDefault();
-
+async function OdeslatData(){
   const data = {
-    jmeno: this.jmeno.value,
-    email: this.email.value,
-    telefon: this.telefon.value,
-    pocet: parseInt(this.pocet.value),
-    datum: this.datum.value,
-    cas_od: this.cas_od.value,
-    cas_do: this.cas_do.value,
-    id: Date.now().toString() // jednoduché ID
+    jmeno: document.getElementById('jmeno').value,
+    email: document.getElementById('email').value,
+    telefon: document.getElementById('telefon').value,
+    pocet: parseInt(document.getElementById('pocet').value),
+    datum: document.getElementById('datum').value,
+    cas_od: document.getElementById('cas_od').value,
+    cas_do: document.getElementById('cas_do').value,
   };
-
-  try {
-    const response = await fetch('/api/post', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-
-    if (response.ok) {
-      alert('Rezervace byla úspěšně uložena.');
-      this.reset();
-      nactiRezervace(); // aktualizace seznamu
-    } else {
-      alert('Chyba při ukládání rezervace.');
-    }
-  } catch (err) {
-    console.error(err);
-    alert('Došlo k chybě.');
-  }
-});
 
 
 
