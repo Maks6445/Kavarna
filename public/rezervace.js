@@ -1,4 +1,4 @@
-async function OdeslatData(){
+async function PoslatData(){
   const data = {
     jmeno: document.getElementById('jmeno').value,
     email: document.getElementById('email').value,
@@ -145,7 +145,4 @@ async function ulozZmeny(e, id) {
     alert('Došlo k chybě.');
   }
 }
-document.getElementById('rezervaceForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  OdeslatData();
-});
+
