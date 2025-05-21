@@ -8,8 +8,21 @@ async function OdeslatData(){
     cas_od: document.getElementById('cas_od').value,
     cas_do: document.getElementById('cas_do').value,
   };
-}
 
+  res = await fetch('/api/post', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
+  if (!res.ok) {
+    alert('Chyba při odesílání rezervace.');
+    return;
+  }else{
+  alert('Rezervace byla úspěšně odeslána.');}
+
+}
 
 async function nactiRezervace() {
   const vystup = document.getElementById('vystupRezervaci');
