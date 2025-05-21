@@ -145,3 +145,7 @@ async function ulozZmeny(e, id) {
     alert('Došlo k chybě.');
   }
 }
+document.getElementById('rezervaceForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  OdeslatData();
+});
