@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rezervace | Kavárna U Tebe</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+  <header>
+    <h1>Rezervace</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Domů</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">O nás</a></li>
+        <li><a href="gallery.html">Galerie</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="style-switcher.html">Změnit styl</a></li>
+        <li><a href="rezervace.html">Rezervace</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Vytvořit novou rezervaci</h2>
+    <form id="rezervaceForm">
+      <label>Jméno: <input type="text" name="jmeno" required></label><br>
+      <label>Email: <input type="email" name="email" required></label><br>
+      <label>Telefon: <input type="tel" name="telefon" required></label><br>
+      <label>Počet osob: <input type="number" name="pocet" min="1" required></label><br>
+      <label>Datum: <input type="date" name="datum" required></label><br>
+      <label>Čas od: <input type="time" name="cas_od" required></label><br>
+      <label>Čas do: <input type="time" name="cas_do" required></label><br>
+      <button type="submit">Odeslat</button>
+    </form>
+
+    <h2>Seznam rezervací</h2>
+    <div id="vystupRezervaci">
+      <!-- Tady budou vypsány rezervace -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kavárna U Tebe | <a href="https://validator.w3.org/">Validátor HTML</a></p>
+  </footer>
+
+  <script src="js/rezervace.js"></script>
+</body>
+</html>
