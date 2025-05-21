@@ -8,7 +8,7 @@ async function OdeslatData(){
     cas_od: document.getElementById('cas_od').value,
     cas_do: document.getElementById('cas_do').value,
   };
-
+}
 
 
 async function nactiRezervace() {
