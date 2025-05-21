@@ -26,15 +26,15 @@
 
   <main>
     <h2>Vytvořit novou rezervaci</h2>
-    <form id="rezervaceForm">
-      <label>Jméno: <input type="text" name="jmeno" required></label><br>
-      <label>Email: <input type="email" name="email" required></label><br>
-      <label>Telefon: <input type="tel" name="telefon" required></label><br>
-      <label>Počet osob: <input type="number" name="pocet" min="1" required></label><br>
-      <label>Datum: <input type="date" name="datum" required></label><br>
-      <label>Čas od: <input type="time" name="cas_od" required></label><br>
-      <label>Čas do: <input type="time" name="cas_do" required></label><br>
-      <button type="submit">Odeslat</button>
+        <form id="rezervaceForm">
+      <label>Jméno: <input type="text" name="jmeno" required id="jmeno"> </label><br>
+      <label>Email: <input type="email" name="email" required id="email"></label><br>
+      <label>Telefon: <input type="tel" name="telefon" required id="telefon"></label><br>
+      <label>Počet osob: <input type="number" name="pocet" min="1" required id="pocet"></label><br>
+      <label>Datum: <input type="date" name="datum" required id="datum"></label><br>
+      <label>Čas od: <input type="time" name="cas_od" required id="cas-od"></label><br>
+      <label>Čas do: <input type="time" name="cas_do" required id="cas-do"></label><br>
+      <button type="submit" onclick="OdeslatData()">Odeslat</button>
     </form>
 
     <h2>Seznam rezervací</h2>
